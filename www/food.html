@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+	<title>JMU AfterDark</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js"></script>
+	<script type="text/javascript" src="cordova-2.5.0.js"></script>
+	<script type="text/javascript" src="PushNotification.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+  </head>
+  <body>
+<!-- Start of first page -->
+<div data-role="page" id="food" data-theme="a">
+
+	<div data-role="panel" id="mypanel" data-theme="a" data-position="left" data-reveal="overlay" data-dismissible="true">
+    <ul data-role="listview">
+		<li><a href="#" data-rel="back">Back</a></li>
+	    <li><a href="index.html">Home</a></li>
+	    <li><a href="food.html">Order Food</a></li>
+	    <li><a href="bar.html">Find a Bar</a></li>
+	    <li><a href="cab.html">Get a Ride</a></li>
+	    <li><a href="about.html">About</a></li>
+	</ul>
+</div><!-- /panel -->
+
+	<div data-role="header" data-id="foo1" data-position="fixed">
+		<h1>JMU AfterDark</h1>
+		<a href="#mypanel" data-icon="bars" data-iconpos="notext" class="ui-btn-left ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-notext ui-btn-up-b" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="b" title="Menu">
+			<span class="ui-btn-inner"><span class="ui-btn-text">Menu</span>
+			<span class="ui-icon ui-icon-bars ui-icon-shadow">&nbsp;</span>
+			</span>
+		</a> 
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="a">
+		<p><strong>Select a Restaurant</strong></p>
+		<div data-role="collapsible-set"  data-inset="true" data-filter="true" >
+			
+			<div data-role="collapsible" data-theme="b">
+				<h3>Campus Cookies</h3>
+				<p>
+					<strong>
+					<br>Sun/Mon/Tues 6pm-1am</br>
+					<br>Wed/Thur 6pm-2am</br>
+					<br>Fri/Sat 6pm-3am</br>
+					<br>540-658-2751</br>
+					<a href="tel:5406582751" data-role="button" data-theme="b">Call to order</a>
+					<a href="campuscookie.com" data-role="button" data-theme="b">You can also order/view menu at CampusCookie.com or click here</a> 
+					</strong>
+			</div>
+
+			<div data-role="collapsible" data-theme="b">
+				<h3>Chanello's Pizza</h3>
+				<p>
+					<strong>
+					<br>Mon-Thu, Sun 11am-1am</br>
+					<br>Fri-Sat 11am-3am</br>
+					<br>(540) 574-4700</br>
+					<a href="http://www.urbanspoon.com/cities/314-virginia/restaurants/1304039-chanello-s-pizza/menu" data-role="button" data-theme="b">Menu</a>
+					<a href="tel:5405744700" data-role="button" data-theme="b">Call</a>
+					</strong>
+				</p>
+			</div>
+
+			<div data-role="collapsible" data-theme="b">
+				<h3>China Express</h3>
+					<p>
+						<strong>
+						<br>Mon-Thur 11am-1am</br>
+						<br>Fri-Sat 11am-2an</br>
+						<br>Sun 11am-1am</br>
+						<br>540-568-9899</br>
+						<a href="http://www.viewmenu.com/china-express-restaurant-18/menu?ref=google" data-role="button" data-theme="b">Menu</a>
+						<a href="tel:5405689899" data-role="button" data-theme="b">Call</a>
+						</strong>
+					</p>
+			</div>
+		
+			<div data-role="collapsible" data-theme="b">
+				<h3>Dave's Express</h3>
+				<p>
+					<strong>
+					<br>Specializing in Burgers and a wide selection of Beers</br>
+					<br>Open 11pm to 4am Delivery or Carry Out</br>
+					<br>(540) 801-TOGO (8646</br>
+					<!--<a href="http://www.davestaverna.com/wp-content/uploads/2010/06/Express-Menu.pdf" data-ajax="false" data-role="button" data-theme="b">Menu</a>-->
+					<a href="geo:0,0?q=Dave's Taverna Express" data-role="button" data-theme="b">Map/Directions</a>
+					<a href="tel:5408018646" data-role="button" data-theme="b">Call</a>
+					</strong>
+				</p>
+			</div>	
+
+			<div data-role="collapsible" data-theme="b">
+				<h3>Domino's Pizza</h3>
+				<p>
+					<strong>
+					<br>Mon-Wed: 10:30 a.m. to 1 a.m.</br>
+					<br>Thu: 10:30 a.m. to 2 a.m.</br>
+					<br>Fri-Sat: 10:30 a.m. to 3 a.m.</br>
+					<br>Sun: 10:30 a.m. to 12 a.m.</br>
+					<a href="http://www.urbanspoon.com/cities/119-corpus-christi/restaurants/1617573-dominos/menu" data-role="button" data-theme="b">Menu</a>
+					<br>31 Miller Cir, Harrisonburg, VA 22801</br>
+					<br>(540) 433-2300</br>
+					<a href="tel:5404332300" data-role="button" data-theme="b">Call</a>
+					<br>41 Burgess Rd Harrisonburg, VA 22801</br>
+					<br>(540) 433-3111</br>
+					<a href="tel:5404333111" data-role="button" data-theme="b">Call</a>
+					</strong>
+				</p>
+			</div>
+
+			<div data-role="collapsible" data-theme="b">
+				<h3>Jimmy John's</h3>
+				<p>
+					<strong>
+					<a href="geo:0,0?q=Jimmy Johns" data-role="button" data-theme="b">Map/Directions</a>
+					<!--<a href="http://www.jimmyjohns.com/PDFs/jj_menu_no_prices.pdf" data-ajax="false" data-role="button" data-theme="b">Menu</a>-->
+					<br>1314 Hillside Avenue Harrisonburg</br>
+					<br>(540) 432-1100</br>
+					<a href="tel:5404321100" data-role="button" data-theme="b">Call</a>
+					<br>1681 E Market St, Harrisonburg, VA</br>
+					<br>This location will deliver to Copper Beach</br> 
+					<br>(540) 437-1200</br>
+					<a href="tel:5404371200" data-role="button" data-theme="b">Call</a>
+					</strong>
+				</p>
+			</div>
+
+			<div data-role="collapsible" data-theme="b">
+				<h3>Tutti Gusti</h3>
+				<p>
+					<strong>
+					<br>Specializing in Pizza</br>
+					<br>(540) 434-6177</br>
+					<br>1326 Hillside Avenue Harrisonburg, VA 22801</br>
+					<br>Sun-Wed til 2am</br>
+					<br>Thur-Sat til 4am</br>
+					<!--<a href="http://www.tuttigusti.us/tutti_gusti_menu_website.pdf" data-ajax="false" data-role="button" data-rel="external" data-theme="b">Menu</a>-->
+					<a href="geo:0,0?q=Tutti Gusti" data-role="button" data-theme="b">Map/Directions</a>
+					<a href="tel:5404346177" data-role="button" data-theme="b">Call</a>
+					</strong>
+				</p>
+			</div>
+
+			<div data-role="collapsible" data-theme="b">
+				<h3>Papa Johns</h3>
+				<p>
+					</strong>
+					<br>702 East Market Street, Harrisonburg, VA 22801</br>
+					<br>(540) 433-7272</br>
+					<a href="tel:5404337272" data-role="button" data-theme="b">Call</a>
+					</strong>
+				</p>
+			</div>
+		
+			<div data-role="collapsible" data-theme="b">
+				<h3>Pizza Hut</h3>
+				<p>
+					<strong>
+					<br>2485 South Main Street, Harrisonburg, VA 22801</br>
+					<br>(540) 433-1821</br>
+					<a href="https://foursquare.com/v/pizza-hut/4c5fff3c3a3703bbbe17e406/menu" data-role="button" data-theme="b">Menu</a>
+					<a href="tel:5404331821"</br>
+					</strong>
+				</p>
+			</div>
+					
+						
+
+
+		</div>
+	</div>
+
+
+
+
+
+</div>
+
+</body>
+</html>

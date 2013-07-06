@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+	<title>JMU AfterDark</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js"></script>
+	<script>function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+
+    // Cordova is loaded and it is now safe to make calls Cordova methods
+    //
+    function onDeviceReady() {
+        // Now safe to use the Cordova API
+    }
+</script>
+</head>
+<body onload="onLoad()">
+<div data-role="page"  id="sober" data-theme="a">
+<div data-role="panel" id="mypanel" data-theme="a" data-position="left" data-reveal="overlay" data-dismissible="true">
+    <ul data-role="listview">
+		<li><a href="#" data-rel="back">Back</a></li>
+	    <li><a href="index.html">Home</a></li>
+	    <li><a href="food.html">Order Food</a></li>
+	    <li><a href="bar.html">Find a Bar</a></li>
+	    <li><a href="cab.html">Get a Ride</a></li>
+	    <li><a href="about.html">About</a></li>
+	</ul>
+</div><!-- /panel -->
+
+	<div data-role="header" data-id="foo1" data-position="fixed">
+		<h1>JMU AfterDark</h1>
+		<a href="#mypanel" data-icon="bars" data-iconpos="notext" class="ui-btn-left ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-notext ui-btn-up-b" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="b" title="Menu">
+			<span class="ui-btn-inner"><span class="ui-btn-text">Menu</span>
+			<span class="ui-icon ui-icon-bars ui-icon-shadow">&nbsp;</span>
+			</span>
+		</a> 
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="a">
+		
+		<div data-role="collapsible" data-theme="b" data-content-theme="d" id="add-driver">
+    		<h4>Add A Sober Driver</h4>
+	
+				<form  id="add-driver form">
+
+					<label for="drivername">Name:</label>
+					<input type="text" id="drivername" name="drivername">
+				
+					<label for="phonenumber">Tel:</label>
+					<input type="tel" name="phonenumber" id="phonenumber" placeholder="123-4567-890">
+					<br>
+					<label for="day">Day:</label>
+					<input type="text" id="day" name="day" placeholder="What Day are you Driving ex: Friday">
+
+					<label for="time">Hours:</label>
+					<input type="text" id="timeframe" name="time" placeholder="Hours: Ex 10pm-2am">
+
+					<label for="price">Price:</label>
+					<input type="text" id="price" name="price" placeholder="Price">
+					
+					<input type="submit" value="Add Driver">
+				</form>
+			</div>
+
+			<div id="output"> <!-- this is where the javascript goes-->
+				<div day-role="collapsible-set">
+				</div>
+			</div>
+		</div>
+
+<script type="text/javascript" src="soberdrivers.js"></script><!-- triggers the javascript file.  At the end so it it loads the place its supposed to go first-->
+
+</body>
+</html>
