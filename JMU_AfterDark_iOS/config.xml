@@ -19,7 +19,7 @@
 -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         id        = "com.jmuafterdark"
-        version   = "2.0.0">
+        version   = "2.9.0">
     <name>Hello Cordova</name>
 
     <description>
@@ -30,7 +30,10 @@
         Apache Cordova Team
     </author>
 
-    <access origin="*"/>
+   
+    <access origin="*" />
+
+    
 
     <!-- <content src="http://mysite.com/myapp.html" /> for external pages -->
     <content src="index.html" />
@@ -109,6 +112,9 @@
     </feature>
     <feature name="LocalStorage">
         <param name="ios-package" value="CDVLocalStorage"/>
+    </feature>
+    <feature name="SplashScreen">
+        <param name="ios-package" value="CDVSplashScreen" />
     </feature>
     <!-- Deprecated plugins element. REmove in 3.0 -->
     <plugins>

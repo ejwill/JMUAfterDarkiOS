@@ -41,13 +41,34 @@
 		<ul data-role="listview">
 			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Credit</li>
 			<li><a href="credit.html">About</a></li>
-			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Feedback</li>
-			<li><a href="https://www.facebook.com/pages/JMU-Afterdark/531377800219494">FaceBook Page</a></li>
-			<li><a href="https://twitter.com/jmuafterdark">Twitter</a></li>
+			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Connect</li>
+                <script type="text/javascript" charset="utf-8">
+                    $('#facebook').click(function() {
+                                         var ref = window.open('https://www.facebook.com/pages/JMU-Afterdark/531377800219494', '_blank', 'location=yes');
+                                         ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
+                                         ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
+                                         ref.addEventListener('exit', function() { alert(event.type); });
+                                     
+                                         });
+                </script>
+
+			<li><a href="#" id="facebook">FaceBook Page</a></li>
+                <script type="text/javascript" charset="utf-8">
+                    $('#twitter').click(function() {
+                                         var ref = window.open('https://twitter.com/jmuafterdark', '_blank', 'location=yes');
+                                         ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
+                                         ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
+                                         ref.addEventListener('exit', function() { alert(event.type); });
+                                     
+                                         });
+                </script>
+
+			<li><a href="#"id="twitter">Twitter</a></li>
 			<li><a href="mailto:JMUAfterDark@gmail.com">Email Me</a></li>
 			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b">Version</li>
 			<li><a href="future.html">Future Updates</a></li>
 			<li><h4>App Version</br> 1.0</h4></li>
+            <li><h4>Version</br> iOS</h4></li>
 			<li><h4>Release Name</br> Absinthe</h4></li>
 		</ul>
 	</div>

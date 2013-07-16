@@ -11,7 +11,7 @@ $(document).ready(function(){
 //ajax request to pull string from php page
 	$.ajax({
 		type: 'GET',
-		url: 'http://jmuafterdark.com/soberdriversjson.php',
+		url: 'http://www.jmuafterdark.com/soberdriversjson.php',
 		dataType: 'jsonp',
 		jsonp: 'jsoncallback',
 		timeout: 5000,
@@ -20,9 +20,8 @@ $(document).ready(function(){
 				var soberdriver = '<div data-role="collapsible"><h3>'+item.name+'</h3>'
 				+ '<p>'+item.phonenumber+'<br>'
 				+ item.day+'<br>'
-				+ item.date+'<br>'
 				+ item.time+'<br>'
-				+ item.price+'</p>';
+				+ item.price+'</p></div>';
 
 				output.append(soberdriver);
 			});
@@ -62,7 +61,7 @@ $(document).ready(function(){
 		$.ajax({
 			type: 'POST',
 			data: postData,
-			url: 'http://jmuafterdark.com/add-driver.php',
+			url: 'http://www.jmuafterdark.com/add-driver.php',
 			success: function(data){
 				loadSoberDrivers();
 				

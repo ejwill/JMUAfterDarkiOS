@@ -38,7 +38,18 @@
 
 	<p><strong>Select a Bar</strong></p>
 		
-		<a href="geo:0,0?q=bar" data-role="button" data-theme="e">Find All Bars Near You</a>
+        <script type="text/javascript" charset="utf-8">
+            $('#allbars').click(function() {
+                                 var ref = window.open('http://maps.apple.com/?q=bar', '_blank', 'location=yes');
+                                 ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
+                                 ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
+                                 ref.addEventListener('exit', function() { alert(event.type); });
+                                 
+                                 });
+            </script>
+            <!--The script above creates an in app webview.  This allows a browser window to open when the below button is clicked.  This is better for iOS because a back button or in this case a done button (think you can change the name) is visible to go back to the app since Apple does not have a physical back button.  Without this a webpage for the link would open but there is no way to get back to the actual app; pressing the home button and going back to the home screen and re-opening the app only shows the page that was left open.-->
+        
+		<a href="#" data-role="button" id="allbars" data-theme="e">Find All Bars Near You</a>
 
 	<div data-role="collapsible-set"  data-inset="true" data-filter="true" >
 			
@@ -46,7 +57,16 @@
 				<h3>AJ Gators Sports Bar and Grill<h3>
 				<p>
 					<strong>
-					<a href="geo:0,0?q=AJ Gators" data-role="button" data-theme="b">Map/Directions</a>
+                        <script type="text/javascript" charset="utf-8">
+                            $('#ajGators').click(function() {
+                                               var ref = window.open('http://maps.apple.com/?q=aj+gators', '_blank', 'location=yes');
+                                               ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
+                                               ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
+                                               ref.addEventListener('exit', function() { alert(event.type); });
+                                               
+                                               });
+                        </script>
+					<a href="#" data-role="button" id="ajGators" data-theme="b">Map/Directions</a>
 					</strong>
 			</div>
 		
@@ -62,7 +82,17 @@
 						<br>Sat 10am-2am</br>
 						<br>10am-10pm</br>
 					</div>
-					<a href="geo:0,0?q=Artful Dodger" data-role="button" data-theme="b">Map/directions</a>
+                        <script type="text/javascript" charset="utf-8">
+                            $('#dodger').click(function() {
+                                                 var ref = window.open('http://maps.apple.com/?q=artful+dodger', '_blank', 'location=yes');
+                                                 ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
+                                                 ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
+                                                 ref.addEventListener('exit', function() { alert(event.type); });
+                                                 
+                                                 });
+                            </script>
+
+					<a href="#" id="dodger" data-role="button" data-theme="b">Map/directions</a>
 					</strong>
 				</p>
 			</div>
@@ -76,7 +106,17 @@
 						<br>Sun-Wed 11am-12am</br>
 						<br>Thu-Sat 11am-2am</br>
 					</div>
-					<a href="geo:0,0?q= Billy Jacks" data-role="button" data-theme="b">Map/directions</a>
+                        <script type="text/javascript" charset="utf-8">
+                            $('#billyjacks').click(function() {
+                                                 var ref = window.open('http://maps.apple.com/?q=billy+jacks+bar&near=Harrisonburg,+VA', '_blank', 'location=yes');
+                                                 ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
+                                                 ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
+                                                 ref.addEventListener('exit', function() { alert(event.type); });
+                                                 
+                                                 });
+                            </script>
+
+					<a href="#" data-role="button" id="billyjacks" data-theme="b">Map/directions</a>
 					</strong>
 				</p>
 			</div>
@@ -90,8 +130,28 @@
 						<h4>Hours</h4>
 						<br>Mon-Sun 11am-2am</br>
 					</div>
-					<a href="http://www.yelp.com/menu/blue-nile-ethiopian-cuisine-harrisonburg" data-role="button" data-theme="b">Menu</a>
-					<a href="geo:0,0?q=Blue Nile Ethiopian Cuisine" data-role="button" data-theme="b">Map/Directions</a>
+                        <script type="text/javascript" charset="utf-8">
+                            $('#bluenileMenu').click(function() {
+                                                 var ref = window.open('http://www.yelp.com/menu/blue-nile-ethiopian-cuisine-harrisonburg', '_blank', 'location=yes');
+                                                 ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
+                                                 ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
+                                                 ref.addEventListener('exit', function() { alert(event.type); });
+                                                 
+                                                 });
+                            </script>
+
+					<a href="#" data-role="button" id="bluenileMenu" data-theme="b">Menu</a>
+                        <script type="text/javascript" charset="utf-8">
+                            $('#blueNileMap').click(function() {
+                                                 var ref = window.open('http://maps.apple.com/?q=Blue+Nile+Ethiopian+Cuisine', '_blank', 'location=yes');
+                                                 ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
+                                                 ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
+                                                 ref.addEventListener('exit', function() { alert(event.type); });
+                                                 
+                                                 });
+                            </script>
+
+					<a href="#" data-role="button" id="blueNileMap" data-theme="b">Map/Directions</a>
 					</strong>
 				</p>
 			</div>
@@ -104,7 +164,17 @@
 						<h4>Hours</h4>
 						<br>Mon-Sun 11am-1:30am</br>
 					</div>
-					<a href="geo:0,0?q= Capital Ale House " data-role="button" data-theme="b">Map/directions</a>
+                        <script type="text/javascript" charset="utf-8">
+                            $('#CapAleHouseMap').click(function() {
+                                                 var ref = window.open('http://maps.apple.com/?q=Capital+Ale+House', '_blank', 'location=yes');
+                                                 ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
+                                                 ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
+                                                 ref.addEventListener('exit', function() { alert(event.type); });
+                                                 
+                                                 });
+                            </script>
+
+					<a href="#" data-role="button" id="CapAleHouseMap" data-theme="b">Map/directions</a>
 					</strong>
 				</p>
 			</div>
@@ -118,21 +188,17 @@
 						<br>Mon-Sat 11am-12am</br>
 						<br>Sun 11am-10pm</br>
 					</div>
-					<a href="geo:0,0?q=Clementine" data-role="button" data-theme="b">Map/Directions</a>
-					</strong>
-				</p>
-			</div>
+                        <script type="text/javascript" charset="utf-8">
+                            $('#clementineMap').click(function() {
+                                                 var ref = window.open('http://maps.apple.com/?q=Clementine&near=Harrisonburg,+VA', '_blank', 'location=yes');
+                                                 ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
+                                                 ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
+                                                 ref.addEventListener('exit', function() { alert(event.type); });
+                                                 
+                                                 });
+                            </script>
 
-			
-			<div data-role="collapsible" data-theme="b">
-				<h3>Daves Downtown Taverna</h3>
-				<p>
-					<strong>
-					<div data-role="collapsible" data-theme="b">
-						<h4>Hours</h4>
-						<br>Mon-Sun 11am-1am</br>
-					</div>
-					<a href="geo:0,0?q=Dave’s Downtown Taverna" data-role="button" data-theme="b">Map/directions</a>
+					<a href="#" data-role="button" id="clementineMap" data-theme="b">Map/Directions</a>
 					</strong>
 				</p>
 			</div>
@@ -146,6 +212,16 @@
 						<br>Mon-Sun 12pm-2am</br>
 					</div>
 					</strong>
+                <script type="text/javascript" charset="utf-8">
+                    $('#GoldCrownMap').click(function() {
+                                         var ref = window.open('http://maps.apple.com/?q=Gold+Crown+Billiards&near="Harrisonburg,+VA', '_blank', 'location=yes');
+                                         ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
+                                         ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
+                                         ref.addEventListener('exit', function() { alert(event.type); });
+                                         
+                                         });
+                    </script>
+                <a href="#" data-role="button" id="GoldCrownMap" data-theme="b">Map/Directions</a>
 				</p>
 			</div>
 
@@ -157,7 +233,17 @@
 						<h4>Hours</h4>
 						<br>Mon-Sun 11am-2am</br>
 					</div>
-					<a href="geo:0,0?q=Dave’s Downtown Taverna" data-role="button" data-theme="b">Map/directions</a>
+                        <script type="text/javascript" charset="utf-8">
+                            $('#FinnigansMap').click(function() {
+                                                 var ref = window.open('http://maps.apple.com/?q=Finnigans+Cove', '_blank', 'location=yes');
+                                                 ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
+                                                 ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
+                                                 ref.addEventListener('exit', function() { alert(event.type); });
+                                                 
+                                                 });
+                            </script>
+
+					<a href="#" data-role="button" id="FinnigansMap" data-theme="b">Map/directions</a>
 					</strong>
 				</p>
 			</div>
@@ -170,7 +256,17 @@
 						<h4>Hours</h4>
 						<br>Mon-Sun 11am-2am</br>
 					</div>
-					<a href="geo:0,0?q=Jack Brown’s" data-role="button" data-theme="b">Map/directions</a>
+                        <script type="text/javascript" charset="utf-8">
+                            $('#JackBrownsMap').click(function() {
+                                                 var ref = window.open('http://maps.apple.com/?q=Jack+Browns&near=Harrisonburg,+VA', '_blank', 'location=yes');
+                                                 ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
+                                                 ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
+                                                 ref.addEventListener('exit', function() { alert(event.type); });
+                                                 
+                                                 });
+                            </script>
+
+					<a href="#" data-role="button" id="JackBrownsMap" data-theme="b">Map/directions</a>
 					</strong>
 				</p>
 			</div>
@@ -185,7 +281,17 @@
 						<br>Mon-Thu 11am-10pm</br>
 						<br>Fri-Sat 11am-11pm</br>
 					</div>
-					<a href="geo:0,0?q= L’italia Restaurant & Bar " data-role="button" data-theme="b">Map/directions</a>
+                        <script type="text/javascript" charset="utf-8">
+                            $('#LitaliaMap').click(function() {
+                                                 var ref = window.open('http://maps.apple.com/?q=Litalia+Restaurant+&+Bar', '_blank', 'location=yes');
+                                                 ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
+                                                 ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
+                                                 ref.addEventListener('exit', function() { alert(event.type); });
+                                                 
+                                                 });
+                            </script>
+
+					<a href="#" data-role="button" id="LitaliaMap" data-theme="b">Map/directions</a>
 					</strong>
 				</p>
 			</div>
@@ -202,7 +308,17 @@
 						<br>Sat 11pm-2am</br>
 						<br>Sun 11pm-10pm</br>
 					</div>
-				<a href="geo:0,0?q= Union Station Restaurant & Bar " data-role="button" data-theme="b">Map/directions</a>
+                    <script type="text/javascript" charset="utf-8">
+                        $('#UnionStationMap').click(function() {
+                                             var ref = window.open('http://maps.apple.com/?q=Union+Statin+Restaurant+and+Bar', '_blank', 'location=yes');
+                                             ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
+                                             ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
+                                             ref.addEventListener('exit', function() { alert(event.type); });
+                                             
+                                             });
+                        </script>
+
+				<a href="#" data-role="button" id="UnionStationMap" data-theme="b">Map/directions</a>
 				</strong>
 			</p>
 		</div>
