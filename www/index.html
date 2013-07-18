@@ -10,13 +10,11 @@
 	<script type="text/javascript" src="PushNotification.js"></script>
 	<script type="text/javascript" src="index.js"></script>
 	<script type="text/javascript" charset="utf-8">
-    document.addEventListener("deviceready", onDeviceReady, false);
-    function onDeviceReady() {
-        navigator.splashscreen.hide();
-    }
+        document.addEventListener("deviceready", onDeviceReady, false);
+        function onDeviceReady() {
+            navigator.splashscreen.hide();
+        }
     </script>
-	<!--<script src="http://10.0.2.2:8080/target/target-script-min.js#anonymous"></script>
-	<script src="http://debug.phonegap.com/target/target-script-min.js#jmuafterdark"></script>-->
   </head>
   <body onload="init();">
     <!-- Start of first page -->
@@ -50,6 +48,56 @@
 		<a href="food.html" data-role="button" data-theme="b">Order Food</a>
 		<a href="bar.html" data-role="button" data-theme="b">Find a Bar</a>
 		<a href="cab.html" data-role="button" data-theme="b">Get a Ride</a>
+        </br>
+        </br>
+       <script>
+                    var output = $('#featured');
+                    
+                    $.ajax({
+                           type: 'GET',
+                           url: 'http://www.jmuafterdark.com/featured.php',
+                           dataType: 'jsonp',
+                           jsonp: 'jsoncallback',
+                           timeout: 5000,
+                           success: function(data, status){
+                           $.each(data, function(i,item){
+                                  var featured ='<span>'+item.title+'</span>';
+                                  
+                                  output.append(featured);
+                                  });
+                           },
+                           error: function(){
+                           output.text('There was an error loading the data.');
+                           }
+                           });
+                </script>
+
+        <div data-role="collapsible" data-theme="b">
+            <h4>Featured:<div id="featured"></div></h4>
+                            <div id="detail"></div>
+                <!--<script>
+                    var output = $('#detail');
+                    
+                    $.ajax({
+                           type: 'GET',
+                           url: 'http://www.jmuafterdark.com/featured.php',
+                           dataType: 'jsonp',
+                           jsonp: 'jsoncallback',
+                           timeout: 5000,
+                           success: function(data, status){
+                           $.each(data, function(i,item){
+                                  var featured ='<br>'+item.detail+'</br>';
+                                  
+                                  output.append(detail);
+                                  });
+                           },
+                           error: function(){
+                           output.text('There was an error loading the data.');
+                           } 
+                           });
+                </script> -->
+            <!--<div id="featured"></div>-->
+        </div>
 	</div><!-- /content -->
 	
 
