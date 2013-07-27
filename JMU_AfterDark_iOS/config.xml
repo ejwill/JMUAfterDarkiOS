@@ -116,6 +116,9 @@
     <feature name="SplashScreen">
         <param name="ios-package" value="CDVSplashScreen" />
     </feature>
+    <feature name="PushNotification">
+        <parm name="ios-package" value="PushNotification" />
+    </feature>
     <!-- Deprecated plugins element. REmove in 3.0 -->
     <plugins>
     </plugins>
