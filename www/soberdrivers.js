@@ -31,6 +31,26 @@ $(document).ready(function(){
 		}
 	});
 	
+	/*$('form').submit(function(){
+		var postData = $(this).serialize();
+		
+		$.ajax({
+			type: 'POST',
+			data: postData,
+			url: 'http://jmuafterdark.com/add-driver.php',
+			success: function(data){
+				console.log(data);
+				alert('Your diver was successfully added');
+			},
+			error: function(){
+				console.log(data);
+				alert('There was an error adding your driver');
+			}
+		});
+		
+		return false;
+	});*/
+
 	
 	$('#add-driver form').submit(function(){
 		var loading = $(this).find('input[type="submit"]');
@@ -61,3 +81,6 @@ $(document).ready(function(){
 	});
 
 });
+//}
+//});
+//});
