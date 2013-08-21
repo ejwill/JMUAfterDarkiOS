@@ -1,10 +1,10 @@
 $(document).ready(function(){
 
-var output = $('#featured');
+var output = $('#featu=red');
 
 	$.ajax({
-		type: 'GET',
-		url: 'http://www.jmuafterdark.com/featured.php',
+		type:'GET',
+		url: '__________________',
 		dataType: 'jsonp',
 		jsonp: 'jsoncallback',
 		timeout: 5000,
