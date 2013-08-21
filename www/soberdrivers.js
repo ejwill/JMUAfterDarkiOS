@@ -11,7 +11,7 @@ $(document).ready(function(){
 //ajax request to pull string from php page
 	$.ajax({
 		type: 'GET',
-		url: 'http://www.jmuafterdark.com/soberdriversjson.php',
+		url: '__________________',
 		dataType: 'jsonp',
 		jsonp: 'jsoncallback',
 		timeout: 5000,
@@ -61,7 +61,7 @@ $(document).ready(function(){
 		$.ajax({
 			type: 'POST',
 			data: postData,
-			url: 'http://www.jmuafterdark.com/add-driver.php',
+			url: '______________________________',
 			success: function(data){
 				loadSoberDrivers();
 				
